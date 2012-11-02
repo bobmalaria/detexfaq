@@ -21,11 +21,15 @@
 <ul>
 <li><a href="#allgemeines">Allgemeines</a><ul>
 <li><a href="#was-ist-tex">Was ist <span class="TeX">T<span class="TeX-e">E</span>X</span>?</a></li>
-<li><a href="#wie-installiere-ich-tex">Wie installiere ich <span class="TeX">T<span class="TeX-e">E</span>X</span>?</a></li>
+<li><a href="#wie-installiere-ich-tex">Wie installiere ich <span class="TeX">T<span class="TeX-e">E</span>X</span>?</a><ul>
+<li><a href="#linux">Linux</a></li>
+<li><a href="#windows">Windows</a></li>
+</ul></li>
 <li><a href="#wie-fange-ich-an-wenn-ich-latex-lernen-möchte">Wie fange ich an, wenn ich La<span class="TeX">T<span class="TeX-e">E</span>X</span> lernen möchte?</a></li>
 <li><a href="#worin-liegt-der-unterschied-zwischen-tex-latex-und-context">Worin liegt der Unterschied zwischen <span class="TeX">T<span class="TeX-e">E</span>X</span>, La<span class="TeX">T<span class="TeX-e">E</span>X</span> und Con<span class="TeX">T<span class="TeX-e">E</span>X</span>t?</a></li>
 <li><a href="#was-sind-pdftex-luatex-und-xetex">Was sind PDF<span class="TeX">T<span class="TeX-e">E</span>X</span>, Lua<span class="TeX">T<span class="TeX-e">E</span>X</span> und Xe<span class="TeX">T<span class="TeX-e">E</span>X</span>?</a></li>
 <li><a href="#wie-bearbeite-ich-tex-dokumente">Wie bearbeite ich <span class="TeX">T<span class="TeX-e">E</span>X</span> Dokumente?</a></li>
+<li><a href="#wo-bekomme-ich-hilfe">Wo bekomme ich Hilfe?</a></li>
 </ul></li>
 <li><a href="#äußere-erscheinung-der-dokumente">Äußere Erscheinung der Dokumente</a><ul>
 <li><a href="#ränder">Ränder</a></li>
@@ -58,14 +62,21 @@
 <h1 id="allgemeines"><a href="#TOC">Allgemeines</a></h1>
 <h2 id="was-ist-tex"><a href="#TOC">Was ist <span class="TeX">T<span class="TeX-e">E</span>X</span>?</a></h2>
 <ul>
-<li>Software um Texte zu formatieren.</li>
+<li>Software zur Formatierung von Texten</li>
 <li>Vergleichbar mit HTML: Eingabe ist nicht gleich der Ausgabe</li>
 <li>Aber auch vollwertige Programmiersprache, daher an manchen Stellen ungewöhnlich zu benutzen.</li>
 </ul>
 <h2 id="wie-installiere-ich-tex"><a href="#TOC">Wie installiere ich <span class="TeX">T<span class="TeX-e">E</span>X</span>?</a></h2>
-<ul>
-<li>Distribution nehmen <span class="TeX">T<span class="TeX-e">E</span>X</span>live, Mik<span class="TeX">T<span class="TeX-e">E</span>X</span>. Linux Distributionen neigen manchmal dazu etwas veraltet zu sein.</li>
-</ul>
+<h3 id="linux"><a href="#TOC">Linux</a></h3>
+<p>Die meisten Linux-Distributionen bieten über die Paketverwaltung eine <span class="TeX">T<span class="TeX-e">E</span>X</span>live-Installation an. (Das entsprechende Paket heißt in allen gänginge Distributionen <code>texlive</code>.) Für den Einstieg ist diese vollkommen ausreichend. Erfahrene Benutzer können <span class="TeX">T<span class="TeX-e">E</span>X</span>live manuell aus anderen Quellen installieren, um immer eine aktuelle Version zu haben.</p>
+<h3 id="windows"><a href="#TOC">Windows</a></h3>
+<p>Die einfachste Möglichkeit, <span class="TeX">T<span class="TeX-e">E</span>X</span> unter Windows zu installieren, ist MiK<span class="TeX">T<span class="TeX-e">E</span>X</span>. Auf der <a href="http://miktex.org/download">MiK<span class="TeX">T<span class="TeX-e">E</span>X</span>-Homepage</a> steht ein Installer zum Download bereit.</p>
+<!--
+### MacOS
+
+???
+-->
+
 <h2 id="wie-fange-ich-an-wenn-ich-latex-lernen-möchte"><a href="#TOC">Wie fange ich an, wenn ich La<span class="TeX">T<span class="TeX-e">E</span>X</span> lernen möchte?</a></h2>
 <ul>
 <li>l2kurz, Bücher</li>
@@ -83,6 +94,12 @@
 <li>Normaler Texteditor, kein Word oder ähnliches</li>
 <li><span class="TeX">T<span class="TeX-e">E</span>X</span> Editoren, siehe <a href="http://tex.stackexchange.com/questions/339/latex-editors-ides"><code class="url">http://tex.stackexchange.com/questions/339/latex-editors-ides</code></a></li>
 <li>Scientific Wordplace? Lyx?</li>
+</ul>
+<h2 id="wo-bekomme-ich-hilfe"><a href="#TOC">Wo bekomme ich Hilfe?</a></h2>
+<p>Nicht jede offene Frage kann in diesen FAQ beantwortet werden. Weitere Quellen für Informationen und Hilfe rund um <span class="TeX">T<span class="TeX-e">E</span>X</span> sind:</p>
+<ul>
+<li>die Mailingliste <code>tex-d-l</code> <!-- (Link? Beschreibung?) --></li>
+<li><a href="http://tex.stackexchange.com/">La<span class="TeX">T<span class="TeX-e">E</span>X</span> Stack Exchange</a></li>
 </ul>
 <h1 id="äußere-erscheinung-der-dokumente"><a href="#TOC">Äußere Erscheinung der Dokumente</a></h1>
 <h2 id="ränder"><a href="#TOC">Ränder</a></h2>
@@ -105,8 +122,15 @@
 <h2 id="warum-soll-ich-...-anstelle-von-...-benutzen"><a href="#TOC">Warum soll ich <code>\[...\]</code> anstelle von <code>$$...$$</code> benutzen?</a></h2>
 <h1 id="dante"><a href="#TOC">DANTE</a></h1>
 <h2 id="was-ist-dante"><a href="#TOC">Was ist DANTE?</a></h2>
+<p>Die <em>Deutschsprachige Anwendervereinigung <span class="TeX">T<span class="TeX-e">E</span>X</span> e. V.</em>, kurz DANTE, hat es sich zum Ziel gesetzt, die Nutzung von <span class="TeX">T<span class="TeX-e">E</span>X</span> durch Betreuung, Beratung und Förderung von Entwicklungsprojekten zu unterstützen. Nähere Informationen finden sich auf der Homepage <a href="http://www.dante.de">dante.de</a>.</p>
 <h2 id="warum-soll-ich-mitglied-werden"><a href="#TOC">Warum soll ich Mitglied werden?</a></h2>
+<ul>
+<li>Vereinszeitung <a href="http://www.dante.de/DTK.html"><em>Die technische Komödie</em></a></li>
+<li>Tagungen und Stammtische</li>
+<li>…</li>
+</ul>
 <h2 id="wie-werde-ich-mitglied"><a href="#TOC">Wie werde ich Mitglied?</a></h2>
+<p>Der Mitgliedsantrag kann einfach <a href="http://www.dante.de/index/Intern/Mitglied/AntragOnline.html">online auf dante.de</a> oder <a href="http://www.dante.de/index/Intern/Mitglied/AntragStandard.pdf">schriftlich mit dem entsprechenden Formular</a> gestellt werden.</p>
 <hr>
 <h1 id="über-diese-faq"><a href="#TOC">Über diese FAQ</a></h1>
 <p>Ergänzungen und Korrekturen bitte an <script type="text/javascript">
@@ -114,7 +138,7 @@
 h='&#116;&#x65;&#120;&#102;&#114;&#x61;&#x67;&#x65;&#110;&#46;&#100;&#x65;';a='&#64;';n='&#x69;&#110;&#102;&#x6f;';e=n+a+h;
 document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'<code>'+e+'</code>'+'<\/'+'a'+'>');
 // -->
-</script><noscript>&#x69;&#110;&#102;&#x6f;&#32;&#x61;&#116;&#32;&#116;&#x65;&#120;&#102;&#114;&#x61;&#x67;&#x65;&#110;&#32;&#100;&#x6f;&#116;&#32;&#100;&#x65;</noscript> senden oder direkt im <a href="https://github.com/texdoc/detexfaq">Github Archiv</a> unter <a href="https://github.com/texdoc/detexfaq"><code class="url">https://github.com/texdoc/detexfaq</code></a> ergänzen. <a href="https://help.github.com/articles/using-pull-requests">Pull requests</a> sind immer gerne gesehen. Die offizielle Seite ist <a href="http://www.texfragen.de"><code class="url">http://www.texfragen.de</code></a>.</p>
+</script><noscript>&#x69;&#110;&#102;&#x6f;&#32;&#x61;&#116;&#32;&#116;&#x65;&#120;&#102;&#114;&#x61;&#x67;&#x65;&#110;&#32;&#100;&#x6f;&#116;&#32;&#100;&#x65;</noscript> senden oder direkt im <a href="https://github.com/texdoc/detexfaq">Github-Archiv</a> unter <a href="https://github.com/texdoc/detexfaq"><code class="url">https://github.com/texdoc/detexfaq</code></a> ergänzen. <a href="https://help.github.com/articles/using-pull-requests">Pull requests</a> sind immer gerne gesehen. Die offizielle Seite ist <a href="http://www.texfragen.de"><code class="url">http://www.texfragen.de</code></a>.</p>
 <h2 id="autoren"><a href="#TOC">Autoren</a></h2>
 <h2 id="lizenz-dieser-faq"><a href="#TOC">Lizenz dieser FAQ</a></h2>
 <p>Die Textbeiträge dieser FAQ unterliegen der Lizenz <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de">CC-BY-SA</a>. Dadurch ist es erlaubt, die Texte frei zu verwenden, sofern sie weiterhin unter denselben Bedingungen verbreitet und die Autoren genannt werden. Die genauen Bestimmungen finden sich <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de">auf der Seite von Creative Commons</a> unter <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de"><code class="url">http://creativecommons.org/licenses/by-sa/3.0/deed.de</code></a>.</p>
