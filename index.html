@@ -45,7 +45,9 @@
 <li><a href="#wie-kann-ich-tabellen-und-abbildungen-in-der-nähe-des-aufrufs-behalten">Wie kann ich Tabellen und Abbildungen in der Nähe des Aufrufs behalten?</a></li>
 </ul></li>
 <li><a href="#bibliographien-und-literaturverweise">Bibliographien und Literaturverweise</a><ul>
-<li><a href="#was-sind-bibtex-und-biber">Was sind Bib<span class="TeX">T<span class="TeX-e">E</span>X</span> und biber?</a></li>
+<li><a href="#was-ist-bibtex">Was ist Bib<span class="TeX">T<span class="TeX-e">E</span>X</span>?</a></li>
+<li><a href="#was-ist-biber">Was ist biber?</a></li>
+<li><a href="#was-sind-.bib-dateien">Was sind <code>.bib</code>-Dateien?</a></li>
 <li><a href="#was-ist-biblatex">Was ist biblatex?</a></li>
 </ul></li>
 <li><a href="#spezialitäten">Spezialitäten</a><ul>
@@ -81,7 +83,7 @@
 <h3 id="windows"><a href="#TOC">Windows</a></h3>
 <p>Die einfachste Möglichkeit, <span class="TeX">T<span class="TeX-e">E</span>X</span> unter Windows zu installieren, ist MiK<span class="TeX">T<span class="TeX-e">E</span>X</span>. Auf der <a href="http://miktex.org/download">MiK<span class="TeX">T<span class="TeX-e">E</span>X</span>-Homepage</a> steht ein Installer zum Download bereit.</p>
 <h3 id="mac-os-x"><a href="#TOC">Mac OS X</a></h3>
-<p>Für Mac OS X gibt es eine Distribution, die auf <span class="TeX">T<span class="TeX-e">E</span>X</span>live aufbaut: <a href="http://tug.org/mactex/">The Mac<span class="TeX">T<span class="TeX-e">E</span>X</span>-2012 Distribution</a>. Erfahrene Anwender könne auch über die Kommandozeile <span class="TeX">T<span class="TeX-e">E</span>X</span>live installieren.</p>
+<p>Für Mac OS X gibt es eine Distribution, die auf <span class="TeX">T<span class="TeX-e">E</span>X</span>live aufbaut: <a href="http://tug.org/mactex/">The Mac<span class="TeX">T<span class="TeX-e">E</span>X</span>-2012 Distribution</a>. Erfahrene Anwender können auch über die Kommandozeile <span class="TeX">T<span class="TeX-e">E</span>X</span>live installieren.</p>
 <p>Achtung: Es gibt noch vereinzelt Hinweise im Netz, die den den i-Installer empfehlen. Dieser wird aber nicht mehr weiter entwickelt.</p>
 <p>Hilfe für <span class="TeX">T<span class="TeX-e">E</span>X</span> unter Mac OS X gibt es in der englischsprachigen Mailingliste »MacOSX-<span class="TeX">T<span class="TeX-e">E</span>X</span>«, die auf der Hilfe Seite unter <a href="http://tug.org/mactex/help/"><code class="url">http://tug.org/mactex/help/</code></a> verlinkt ist.</p>
 <h2 id="wie-fange-ich-an-wenn-ich-latex-lernen-möchte"><a href="#TOC">Wie fange ich an, wenn ich La<span class="TeX">T<span class="TeX-e">E</span>X</span> lernen möchte?</a></h2>
@@ -110,7 +112,7 @@
 <h3 id="englisch"><a href="#TOC">Englisch</a></h3>
 <ul>
 <li><a href="http://tex.stackexchange.com/"><span class="TeX">T<span class="TeX-e">E</span>X</span> Stack Exchange</a></li>
-<li>Die <a href="https://de.wikipedia.org/wiki/Usenet">Newsgruppe</a> <a href="https://groups.google.com/forum/#!forum/comp.text.tex">de.comp.text.tex</a></li>
+<li>Die <a href="https://de.wikipedia.org/wiki/Usenet">Newsgruppe</a> <a href="https://groups.google.com/forum/#!forum/comp.text.tex">comp.text.tex</a></li>
 <li>Das Forum <a href="http://latex-community.org/">La<span class="TeX">T<span class="TeX-e">E</span>X</span> Community</a></li>
 </ul>
 <p>Weiterhin gibt es noch diverse Blogs über <span class="TeX">T<span class="TeX-e">E</span>X</span> &amp; friends, die unter <a href="http://planet.dante.de/"><code class="url">http://planet.dante.de/</code></a> gesammelt sind.</p>
@@ -131,10 +133,20 @@
 <h2 id="wie-kann-ich-die-positionierung-der-gleitumgebungen-tabellen-und-abbildungen-beeinflussen"><a href="#TOC">Wie kann ich die Positionierung der Gleitumgebungen (Tabellen und Abbildungen) beeinflussen?</a></h2>
 <h2 id="wie-kann-ich-tabellen-und-abbildungen-in-der-nähe-des-aufrufs-behalten"><a href="#TOC">Wie kann ich Tabellen und Abbildungen in der Nähe des Aufrufs behalten?</a></h2>
 <h1 id="bibliographien-und-literaturverweise"><a href="#TOC">Bibliographien und Literaturverweise</a></h1>
-<h2 id="was-sind-bibtex-und-biber"><a href="#TOC">Was sind Bib<span class="TeX">T<span class="TeX-e">E</span>X</span> und biber?</a></h2>
+<h2 id="was-ist-bibtex"><a href="#TOC">Was ist Bib<span class="TeX">T<span class="TeX-e">E</span>X</span>?</a></h2>
+<p>Bib<span class="TeX">T<span class="TeX-e">E</span>X</span> ist ein Programm, mit dem man Literaturverweise und Bibliographien erstellen kann. Es benutzt dazu »Anker« (<code>\cite</code>-Befehle) in einem La<span class="TeX">T<span class="TeX-e">E</span>X</span>-Dokument, die es zunächst sammelt und in einem zweiten Schritt die dazugehörigen Daten aus einer separaten Datei mit der Endung <code>.bib</code> entnimmt. Die Darstellung der Verweise und des Literaturverzeichnisses lässt sich durch <code>bst</code>-Dateien beeinflussen (<code>bst</code> steht für »bibliography style«). Es gibt eine Reihe von Bibliographiestilen, die unterschiedliche Vorgaben erfüllen. Eine Auswahl davon kann man sich anhand von Beispielen auf der Seite <a href="http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html">Bib<span class="TeX">T<span class="TeX-e">E</span>X</span> style examples</a> anschauen. Die Anpassung von Bibliographiestilen ist nicht gerade trivial, da sie in einer Programmiersprache abgefasst sind, die in Form einer Stackmaschine mit nur wenigen Befehlen funktioniert (<a href="http://de.wikipedia.org/wiki/Umgekehrte_Polnische_Notation">Umgekehrte Polnische Notation</a>).</p>
+<p>Bib<span class="TeX">T<span class="TeX-e">E</span>X</span> wurde 1988 geschrieben (bis Version 0.99c) und 2010 aktualisiert (Version 0.99d).</p>
 <ul>
-<li>bibtex-Programm (und bibtex8)</li>
+<li>kurz etwas zu den Beschränkungen</li>
+<li>bibtex8</li>
+<li>bibtexu</li>
+</ul>
+<h2 id="was-ist-biber"><a href="#TOC">Was ist biber?</a></h2>
+<ul>
 <li>biber als Nachfolger von bibtex (dem Programm)</li>
+</ul>
+<h2 id="was-sind-.bib-dateien"><a href="#TOC">Was sind <code>.bib</code>-Dateien?</a></h2>
+<ul>
 <li>Bib<span class="TeX">T<span class="TeX-e">E</span>X</span>-Syntax (.bib-Dateien)</li>
 </ul>
 <h2 id="was-ist-biblatex"><a href="#TOC">Was ist biblatex?</a></h2>
