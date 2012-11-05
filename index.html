@@ -37,7 +37,10 @@
 </ul></li>
 <li><a href="#äußere-erscheinung-der-dokumente">Äußere Erscheinung der Dokumente</a><ul>
 <li><a href="#ränder">Ränder</a></li>
-<li><a href="#schriftarten">Schriftarten</a></li>
+<li><a href="#schriftarten">Schriftarten</a><ul>
+<li><a href="#wie-ändere-ich-die-schriftart-in-meinem-dokument">Wie ändere ich die Schriftart in meinem Dokument?</a></li>
+<li><a href="#wie-ändere-ich-die-schriftgröße-in-meinem-dokument">Wie ändere ich die Schriftgröße in meinem Dokument?</a></li>
+</ul></li>
 <li><a href="#ich-benötige-ein-spezielles-symbol-in-meinem-dokument.-wie-kann-ich-es-finden">Ich benötige ein spezielles Symbol in meinem Dokument. Wie kann ich es finden?</a></li>
 </ul></li>
 <li><a href="#abbildungen-und-gleitumgebungen">Abbildungen und Gleitumgebungen</a><ul>
@@ -126,6 +129,18 @@
 <li>Geometry Paket</li>
 </ul>
 <h2 id="schriftarten"><a href="#TOC">Schriftarten</a></h2>
+<h3 id="wie-ändere-ich-die-schriftart-in-meinem-dokument"><a href="#TOC">Wie ändere ich die Schriftart in meinem Dokument?</a></h3>
+<p>Es gibt mehrere Möglichkeiten, die Schriftart in einem Dokument zu ändern. Für manche Schriftarten werden Pakete gepflegt, die über <code>\usepackage</code> eingebunden werden können. Eine Übersicht über diese Pakete findet sich im <a href="http://www.tug.dk/FontCatalogue/">La<span class="TeX">T<span class="TeX-e">E</span>X</span> Font Catalogue</a> unter <a href="http://www.tug.dk/FontCatalogue/"><code class="url">http://www.tug.dk/FontCatalogue/</code></a>. Dort steht auch jeweils, wie die Schrift eingebunden werden kann.</p>
+<p>Wenn statt einer Serifenschrift eine serifenlose Schrift als Standard verwendet werden soll, kann der Befehl</p>
+<pre><code>\renewcommand{\familydefault}{\sfdefault}</code></pre>
+<p>verwendet werden.</p>
+<p>Bei der Verwendung von Xe<span class="TeX">T<span class="TeX-e">E</span>X</span> kann jede im System installierte Schriftart verwendet werden. Hierfür dienen die Befehle <code>\setmainfont</code>, <code>\setsansfont</code> und <code>\setmonofont</code>:</p>
+<pre><code>\setmainfont[Mapping=tex-text]{Linux Libertine O}
+\setsansfont[Mapping=tex-text]{Source Sans Pro}
+\setmonofont[Mapping=tex-text]{Source Code Pro}</code></pre>
+<h3 id="wie-ändere-ich-die-schriftgröße-in-meinem-dokument"><a href="#TOC">Wie ändere ich die Schriftgröße in meinem Dokument?</a></h3>
+<p>Um die Schriftgröße zu verändern, kann man zum einen die Befehle <code>\small</code>, <code>\large</code>, <code>\huge</code> etc. verwendet werden, mit denen einzelne Worte, Sätze, Bereiche größer oder kleiner gesetzt werden. Bei der Verwendung von KOMA-Script-Klassen kann die Schriftgröße global über das Argument <code>fontsize</code> geändert werden, zum Beispiel:</p>
+<pre><code>\documentclass[fontsize=12pt]{scrartcl}</code></pre>
 <h2 id="ich-benötige-ein-spezielles-symbol-in-meinem-dokument.-wie-kann-ich-es-finden"><a href="#TOC">Ich benötige ein spezielles Symbol in meinem Dokument. Wie kann ich es finden?</a></h2>
 <p>Meist kann man nur in einem Handbuch nach dem Befehl suchen, der ein spezielles Symbol erzeugt. Hilfreich hat sich das Dokument »Comprehensive La<span class="TeX">T<span class="TeX-e">E</span>X</span> symbols list« erwiesen, das unter <a href="http://texdoc.net/pkg/symbols-a4.pdf"><code class="url">http://texdoc.net/pkg/symbols-a4.pdf</code></a> oder mithilfe der Kommandozeile <code>texdoc symbols-a4</code> zu lesen ist.</p>
 <p>Daneben gibt es noch einen prima Webdienst, <a href="http://detexify.kirelabs.org/classify.html">Detextify</a>. Hier zeichnet man mit der Maus auf einer Webseite ein Symbol, das man sucht und bekommt den Befehl zurück.</p>
@@ -163,8 +178,8 @@
 <h2 id="welche-regelungen-zum-mathematiksatz-kann-ich-heranziehen"><a href="#TOC">Welche Regelungen zum Mathematiksatz kann ich heranziehen?</a></h2>
 <p>ISO, EN</p>
 <h2 id="wie-kann-ich-einen-aufrechten-differentialoperator-erzeugen"><a href="#TOC">Wie kann ich einen aufrechten Differentialoperator erzeugen?</a></h2>
-
-<p> FIXME: Warum sieht man obiges nicht? Quelle: H. Voß Mathematiksatz 2. Aufl. S. 76</p>
+<pre><code>\newcommand*\diff{\mathop{}\!\mathrm{d}}</code></pre>
+<p>Quelle: <em>H. Voß</em>: Mathematiksatz. 2. Aufl. S. 76</p>
 <h1 id="dante"><a href="#TOC">DANTE</a></h1>
 <h2 id="was-ist-dante"><a href="#TOC">Was ist DANTE?</a></h2>
 <p>Die <em>Deutschsprachige Anwendervereinigung <span class="TeX">T<span class="TeX-e">E</span>X</span> e. V.</em>, kurz DANTE, hat es sich zum Ziel gesetzt, die Nutzung von <span class="TeX">T<span class="TeX-e">E</span>X</span> durch Betreuung, Beratung und Förderung von Entwicklungsprojekten zu unterstützen. Nähere Informationen finden sich auf der Homepage <a href="http://www.dante.de">dante.de</a>.</p>
@@ -187,9 +202,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'<code>'+e+'</code>'+'<\/'+
 // -->
 </script><noscript>&#x69;&#110;&#102;&#x6f;&#32;&#x61;&#116;&#32;&#116;&#x65;&#120;&#102;&#114;&#x61;&#x67;&#x65;&#110;&#32;&#100;&#x6f;&#116;&#32;&#100;&#x65;</noscript> senden oder direkt im <a href="https://github.com/texdoc/detexfaq">Github-Archiv</a> unter <a href="https://github.com/texdoc/detexfaq"><code class="url">https://github.com/texdoc/detexfaq</code></a> ergänzen. <a href="https://help.github.com/articles/using-pull-requests">Pull requests</a> sind immer gerne gesehen. Die offizielle Seite ist <a href="http://texfragen.de"><code class="url">http://texfragen.de</code></a>.</p>
 <h2 id="autoren"><a href="#TOC">Autoren</a></h2>
-<!-- mit Komma siehts vielleicht besser aus? -->
-
-<p>Patrick Gundlach, Jonas Stein, Dominik Waßenhoven</p>
+<p>Patrick Gundlach, Robin Krahl, Jonas Stein, Dominik Waßenhoven</p>
 <h2 id="lizenz-dieser-faq"><a href="#TOC">Lizenz dieser FAQ</a></h2>
 <p>Die Textbeiträge dieser FAQ unterliegen der Lizenz <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de">CC-BY-SA</a>. Dadurch ist es erlaubt, die Texte frei zu verwenden, sofern sie weiterhin unter denselben Bedingungen verbreitet und die Autoren genannt werden. Die genauen Bestimmungen finden sich <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de">auf der Seite von Creative Commons</a> unter <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de"><code class="url">http://creativecommons.org/licenses/by-sa/3.0/deed.de</code></a>.</p>
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.de"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="img/cc-by-sa.png" /></a>
